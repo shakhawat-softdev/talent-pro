@@ -1,15 +1,11 @@
-import { useEffect, useState } from "react";
+
 import ServiceCard from "../../components/ServiceCard";
+import { useLoaderData } from "react-router-dom";
 
 
 const Home = () => {
-   const [serviceData, setServiceData] = useState([])
-   useEffect(() => {
-      fetch('https://talent-pro-server.vercel.app/services')
-         .then(res => res.json())
-         .then(data => setServiceData(data))
-         .catch(error => console.error(error.message))
-   }, []);
+
+   const service = useLoaderData();
 
    return (
       <div className='px-4 py-5 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8'>
@@ -19,7 +15,7 @@ const Home = () => {
          </div>
 
          <div className="grid md:grid-cols-3 lg:grid-cols-4 place-items-center gap-2 mt-10 md:mt-16">
-            {serviceData.map(item => <ServiceCard key={item.id} item={item} />)}
+            {service.map(item => <ServiceCard key={item.id} item={item} />)}
          </div>
 
       </div>
