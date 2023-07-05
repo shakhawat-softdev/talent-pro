@@ -1,8 +1,4 @@
-
-
 import { useLoaderData } from "react-router-dom";
-import React, { useState } from "react";
-import DarkModeToggle from "react-dark-mode-toggle";
 import ServiceCard from "../ServiceCard";
 import Fade from 'react-reveal/Fade';
 

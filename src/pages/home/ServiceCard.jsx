@@ -1,6 +1,5 @@
 import { ArrowSmallRightIcon } from '@heroicons/react/24/solid'
 import { Link } from 'react-router-dom';
-import Fade from 'react-reveal/Fade';
 import Roll from 'react-reveal/Roll';
 const ServiceCard = ({ item }) => {
 
@@ -14,7 +13,6 @@ const ServiceCard = ({ item }) => {
                <h2 className="text-base font-bold">{title}</h2>
                <p><small>{service}</small></p>
                <div className='flex gap-2 '>
-
                   <Link className='flex gap-2 hover:bg-slate-300 p-1 rounded-md'>
                      <h2 className="text-blue-700  ">Learn More</h2>
                      <ArrowSmallRightIcon className="h-6 w-6 text-blue-500 " />
