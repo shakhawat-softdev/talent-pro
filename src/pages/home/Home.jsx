@@ -5,9 +5,10 @@ import ServiceCard from "../../components/ServiceCard";
 const Home = () => {
    const [serviceData, setServiceData] = useState([])
    useEffect(() => {
-      fetch('data.json')
+      fetch('https://talent-pro-server.vercel.app/services')
          .then(res => res.json())
          .then(data => setServiceData(data))
+         .catch(error => console.error(error.message))
    }, []);
 
    return (
